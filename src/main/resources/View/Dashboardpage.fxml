@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="665.0" prefWidth="704.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.project_01.Controller.DashboardpageController">
+   <children>
+
+      <AnchorPane fx:id="ancMainContainer" layoutX="178.0" prefHeight="665.0" prefWidth="531.0" style="-fx-background-color: #000;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="178.0" AnchorPane.rightAnchor="-5.0" AnchorPane.topAnchor="0.0" />
+
+
+      <ScrollPane fitToWidth="true" hbarPolicy="NEVER" layoutX="0.0" prefHeight="696.0" prefWidth="177.0" vbarPolicy="AS_NEEDED" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <content>
+            <AnchorPane prefHeight="674.0" prefWidth="162.0">
+               <children>
+
+                  <JFXButton buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="23.0" layoutY="24.0" onAction="#btnGoHomePageOnAction" prefHeight="80.0" prefWidth="118.0" styleClass="orderBtn2" text="Home" />
+                  <Label alignment="CENTER" layoutX="23.0" layoutY="94.0" prefHeight="25.0" prefWidth="118.0" text="Home">
+                     <font><Font size="14.0" /></font>
+                  </Label>
+
+
+                  <JFXButton buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="23.0" layoutY="107.0" onAction="#btnGoGuestPageOnAction" prefHeight="80.0" prefWidth="118.0" styleClass="orderBtn2" text="Guest">
+                     <graphic>
+                        <ImageView fitHeight="60.0" fitWidth="60.0" preserveRatio="true">
+                           <image><Image url="@../Image/icons8-customer-48.png" /></image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <Label alignment="CENTER" layoutX="23.0" layoutY="187.0" prefHeight="25.0" prefWidth="118.0" text="Guest">
+                     <font><Font size="14.0" /></font>
+                  </Label>
+
+
+                  <JFXButton buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="22.0" layoutY="210.0" onAction="#btnorderPageOnAction" prefHeight="80.0" prefWidth="118.0" styleClass="orderBtn2" text="Booking">
+                     <graphic>
+                        <ImageView fitHeight="60.0" fitWidth="60.0" preserveRatio="true">
+                           <image><Image url="@../Image/7668483.png" /></image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <Label alignment="CENTER" layoutX="23.0" layoutY="290.0" prefHeight="25.0" prefWidth="118.0" text="Booking">
+                     <font><Font size="14.0" /></font>
+                  </Label>
+
+
+                  <JFXButton buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="23.0" layoutY="315.0" onAction="#btnEmployeePageOnAction" prefHeight="80.0" prefWidth="118.0" styleClass="orderBtn2" text="Employee">
+                     <graphic>
+                        <ImageView fitHeight="60.0" fitWidth="60.0" preserveRatio="true">
+                           <image><Image url="@../Image/icons8-management-48.png" /></image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <Label alignment="CENTER" layoutX="23.0" layoutY="389.0" prefHeight="25.0" prefWidth="118.0" text="Employee">
+                     <font><Font size="14.0" /></font>
+                  </Label>
+
+
+                  <JFXButton buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="23.0" layoutY="408.0" onAction="#btnSupplierPageOnAction" prefHeight="80.0" prefWidth="118.0" styleClass="orderBtn2" text="Supplier">
+                     <graphic>
+                        <ImageView fitHeight="60.0" fitWidth="60.0" preserveRatio="true">
+                           <image>
+                              <Image url="@../Image/icons8-product-management-48.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <Label alignment="CENTER" layoutX="23.0" layoutY="476.0" prefHeight="25.0" prefWidth="118.0" text="Inventory">
+                     <font><Font size="14.0" /></font>
+                  </Label>
+
+
+                  <JFXButton buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="23.0" layoutY="501.0" onAction="#btnReportPageOnAction" prefHeight="80.0" prefWidth="118.0" styleClass="orderBtn2" text="Report">
+                     <graphic>
+                        <ImageView fitHeight="60.0" fitWidth="60.0" preserveRatio="true">
+                           <image><Image url="@../Image/icons8-business-report-48.png" /></image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <Label alignment="CENTER" layoutX="23.0" layoutY="581.0" prefHeight="25.0" prefWidth="118.0" text="Report">
+                     <font><Font size="14.0" /></font>
+                  </Label>
+
+
+                  <JFXButton fx:id="logOutBtn" contentDisplay="GRAPHIC_ONLY" layoutX="43.0" layoutY="606.0" onAction="#btnLogouttPageOnAction" prefHeight="78.0" prefWidth="78.0" text="EXT">
+                     <graphic>
+                        <ImageView fitHeight="60.0" fitWidth="60.0" preserveRatio="true">
+                           <image><Image url="@../Image/icons8-sign-out-64.png" /></image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <Label alignment="CENTER" layoutX="23.0" layoutY="684.0" prefHeight="25.0" prefWidth="118.0" text="Logout">
+                     <font><Font size="14.0" /></font>
+                  </Label>
+                  <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="52.0" layoutY="34.0" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/icons8-home-48.png" />
+                     </image>
+                  </ImageView>
+
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+
+   </children>
+</AnchorPane>

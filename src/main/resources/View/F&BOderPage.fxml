@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainAnchorPane" prefHeight="600.0" prefWidth="850.0" style="-fx-background-color: white; -fx-background-radius: 20;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.project_01.Controller.Booking.FBOderPageController">
+    <children>
+
+        <Label layoutX="270.0" layoutY="20.0" text="Food Beverage Ordering">
+            <font>
+                <Font name="Arial Bold" size="26" />
+            </font>
+        </Label>
+
+        <Label layoutX="50.0" layoutY="70.0" text="Customer Tel:" />
+        <TextField fx:id="txtPhoneNo" layoutX="150.0" layoutY="65.0" prefWidth="200.0" />
+        <Label layoutX="439.0" layoutY="69.0" text="Customer Name:" />
+        <Label fx:id="lblGuestName" layoutX="539.0" layoutY="69.0" prefWidth="200.0" style="-fx-font-weight: bold;" text="Unknown Customer" />
+
+        <Label layoutX="50.0" layoutY="120.0" text="Category:" />
+        <ComboBox fx:id="cmbCategory" layoutX="150.0" layoutY="115.0" prefWidth="200.0" />
+
+        <Label layoutX="400.0" layoutY="120.0" text="Item:" />
+        <ComboBox fx:id="cmbItem" layoutX="500.0" layoutY="115.0" prefWidth="200.0" />
+
+        <Label layoutX="50.0" layoutY="170.0" text="Quantity:" />
+        <Spinner fx:id="spinnerQty" layoutX="150.0" layoutY="165.0" prefWidth="100.0" />
+
+
+        <Label layoutX="400.0" layoutY="170.0" text="Price:" />
+        <Label fx:id="lblPrice" layoutX="500.0" layoutY="170.0" prefWidth="100.0" style="-fx-font-weight: bold; -fx-font-size: 14px;" text="0.00" />
+
+
+        <JFXButton fx:id="btnAddToCart" layoutX="500.0" layoutY="225.0" onAction="#btnAddToCartOnAction" prefWidth="120.0" style="-fx-background-color: #27ae60; -fx-text-fill: white;" text="Add to Cart" />
+        <JFXButton fx:id="btnClear" layoutX="647.0" layoutY="225.0" onAction="#btnClearOnAction" prefWidth="120.0" style="-fx-background-color: #e67e22; -fx-text-fill: white;" text="Clear" />
+
+
+        <Label layoutX="50.0" layoutY="300.0" style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Order Summary:" />
+        <TableView fx:id="tblOrder" layoutX="53.0" layoutY="337.0" prefHeight="202.0" prefWidth="772.0">
+            <columns>
+                <TableColumn fx:id="colItem" prefWidth="200.0" text="Item" />
+                <TableColumn fx:id="colQty" prefWidth="100.0" text="Qty" />
+                <TableColumn fx:id="colUnitPrice" prefWidth="100.0" text="Unit Price" />
+                <TableColumn fx:id="colTotal" prefWidth="120.0" text="Total" />
+                <TableColumn fx:id="colAction" prefWidth="100.0" text="Action" />
+            </columns>
+        </TableView>
+
+
+        <Label layoutX="500.0" layoutY="550.0" text="Total:" />
+        <Label fx:id="lblOrderTotal" layoutX="550.0" layoutY="545.0" prefWidth="100.0" style="-fx-font-weight: bold; -fx-font-size: 16px;" text="0.00" />
+        <JFXButton fx:id="btnConfirmOrder" layoutX="670.0" layoutY="545.0" onAction="#btnConfirmOrderOnAction" prefWidth="120.0" style="-fx-background-color: #2980b9; -fx-text-fill: white;" text="Confirm Order" />
+
+
+        <JFXButton buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="-11.0" layoutY="-14.0" onAction="#btnBackOnAction" prefHeight="45.0" prefWidth="76.0" styleClass="orderBtn2" text="Button">
+            <graphic>
+                <ImageView fx:id="btnBack" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Image/return-button-png-31.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </JFXButton>
+      <JFXButton fx:id="btnAddGuest" layoutX="350.0" layoutY="59.0" onAction="#btnAddGuestOnAction" prefHeight="31.0" prefWidth="43.0" text=" ">
+         <graphic>
+            <ImageView fitHeight="31.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/icons8-add-48.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+
+    </children>
+</AnchorPane>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ancMainContainer" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #ECEFF1;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.project_01.Controller.InventoryPageController">
+
+    <VBox alignment="CENTER" spacing="25.0" style="-fx-background-color: #F8F8F0; -fx-background-radius: 20; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 10, 0.5, 0, 0);" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+        <padding>
+            <Insets bottom="40.0" left="60.0" right="60.0" top="40.0" />
+        </padding>
+
+        <Label text="Inventory Management" textFill="#37474F">
+            <font>
+                <Font name="System Bold" size="28.0" />
+            </font>
+            <VBox.margin>
+                <Insets bottom="20.0" />
+            </VBox.margin>
+        </Label>
+
+        <JFXButton fx:id="btnAddSupplier" onAction="#AddSupplierOnAction" prefHeight="60.0" prefWidth="300.0" style="-fx-background-color: #5C6BC0; -fx-background-radius: 10;" text="Add Supplier" textFill="white">
+            <graphic>
+                <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Image/icons8-supplier-48.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+            <ripplerFill>#3949AB</ripplerFill>
+        </JFXButton>
+
+        <JFXButton fx:id="btnAddFoodBeverage" onAction="#AddFoodBeverageOnAction" prefHeight="60.0" prefWidth="300.0" style="-fx-background-color: #66BB6A; -fx-background-radius: 10;" text="Add Food &amp; Beverage" textFill="white">
+            <graphic>
+                <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Image/icons8-add-48.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+            <ripplerFill>#FB8C00</ripplerFill>
+        </JFXButton>
+    </VBox>
+
+</AnchorPane>

@@ -1,0 +1,220 @@
+<!-- Created with Jaspersoft Studio version 7.0.0.final using JasperReports Library version 7.0.0-b478feaa9aab4375eba71de77b4ca138ad2f62aa  -->
+<jasperReport name="BookingReport" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2cbfc437-09d5-4c9e-a142-7e01170568ae">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="VillaDBConnection"/>
+	<parameter name="P_DATE" class="java.lang.String"/>
+	<query language="SQL"><![CDATA[SELECT 
+    b.bookingId,
+    g.name AS guestName,
+    b.guestPhone,
+    b.roomType,
+    b.roomId,
+    b.checkIn,
+    b.duration,
+    b.totalPrice,
+    b.status
+FROM 
+    booking b
+JOIN 
+    guest g ON b.guestPhone = g.contact
+ORDER BY 
+    b.checkIn DESC
+]]></query>
+	<field name="bookingId" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="bookingId"/>
+		<property name="com.jaspersoft.studio.field.label" value="bookingId"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="booking"/>
+	</field>
+	<field name="guestName" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Name"/>
+		<property name="com.jaspersoft.studio.field.label" value="guestName"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="guest"/>
+	</field>
+	<field name="guestPhone" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="guestPhone"/>
+		<property name="com.jaspersoft.studio.field.label" value="guestPhone"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="booking"/>
+	</field>
+	<field name="roomType" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="roomType"/>
+		<property name="com.jaspersoft.studio.field.label" value="roomType"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="booking"/>
+	</field>
+	<field name="roomId" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="roomId"/>
+		<property name="com.jaspersoft.studio.field.label" value="roomId"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="booking"/>
+	</field>
+	<field name="checkIn" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="checkIn"/>
+		<property name="com.jaspersoft.studio.field.label" value="checkIn"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="booking"/>
+	</field>
+	<field name="duration" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="duration"/>
+		<property name="com.jaspersoft.studio.field.label" value="duration"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="booking"/>
+	</field>
+	<field name="totalPrice" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="totalPrice"/>
+		<property name="com.jaspersoft.studio.field.label" value="totalPrice"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="booking"/>
+	</field>
+	<field name="status" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="status"/>
+		<property name="com.jaspersoft.studio.field.label" value="status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="booking"/>
+	</field>
+	<background splitType="Stretch"/>
+	<title height="75" splitType="Stretch">
+		<element kind="staticText" uuid="48204b5c-7d5b-4959-8e49-735936ecfd17" x="2" y="40" width="550" height="30" fontSize="18.0" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Booking Report]]></text>
+		</element>
+		<element kind="staticText" uuid="a69814f5-c9db-48b4-a634-ba6e26ff0b09" x="2" y="0" width="550" height="40" fontSize="22.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[WIMAL VILLA]]></text>
+		</element>
+		<element kind="textField" uuid="e63c4cd6-48d9-4ad7-bb44-5f699028439b" x="452" y="40" width="100" height="20" fontSize="12.0" hTextAlign="Right">
+			<expression><![CDATA[$P{P_DATE}]]></expression>
+		</element>
+	</title>
+	<pageHeader height="4" splitType="Stretch">
+		<element kind="rectangle" uuid="41527a11-a794-400e-8955-ea0fb78f4f17" x="11" y="0" width="532" height="1" backcolor="#0D0C0C"/>
+	</pageHeader>
+	<columnHeader height="46" splitType="Stretch">
+		<element kind="staticText" uuid="2ec8f8d1-0c0b-4216-a5ce-5ee6dc8888e1" x="0" y="16" width="67" height="30" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[bookingId]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="251e1f09-bee0-4aaa-a4db-a3a2a1e4c65d"/>
+			<box>
+				<pen lineWidth="1.0"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="e500279a-905b-4f3a-a719-ba81eee33644" x="67" y="16" width="61" height="30" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[guestName]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="99e624b1-1d49-4312-8e79-2246802d5071"/>
+			<box>
+				<pen lineWidth="1.0"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="db11385b-3b5c-4312-9844-7d8ad569343f" x="128" y="16" width="61" height="30" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[guestPhone]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="74dea23a-9986-4554-8eea-28a552dfa9bd"/>
+			<box>
+				<pen lineWidth="1.0"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="f92aa563-adc9-454a-b77d-a972f866ea2c" x="189" y="16" width="61" height="30" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[roomType]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="682ba931-2705-49c3-b0d8-1f00818111e7"/>
+			<box>
+				<pen lineWidth="1.0"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="6cf081bf-eb39-4abf-b747-76def5dc1fb7" x="250" y="16" width="61" height="30" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[roomId]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4d00f64f-6b75-453e-8e61-7e7a8da280b0"/>
+			<box>
+				<pen lineWidth="1.0"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="7adb351e-29b7-4ecb-8089-f6dafffff9bc" x="311" y="16" width="61" height="30" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[checkIn]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8257dede-23cb-4c85-ab07-00ccfdb922ca"/>
+			<box>
+				<pen lineWidth="1.0"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="fce22dcd-27a8-429f-93cc-ca87d7de68f2" x="372" y="16" width="61" height="30" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[duration]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2449c2b8-01e4-4779-95f3-56395f40aef0"/>
+			<box>
+				<pen lineWidth="1.0"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="458723c8-0cf5-4f9c-b209-2590c45c1ed3" x="494" y="16" width="61" height="30" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[totalPrice]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="78e8771a-8cfb-4443-b8b2-e6fd3e87fc07"/>
+			<box>
+				<pen lineWidth="1.0"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="336cee73-2100-4492-81d9-f7088b74c8fe" x="433" y="16" width="61" height="30" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[status]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b75bc59b-c5cc-42d2-a797-13648cbf23f2"/>
+			<box>
+				<pen lineWidth="1.0"/>
+			</box>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="31" splitType="Stretch">
+			<element kind="textField" uuid="922a8dc4-eae3-441c-83b0-0e418f620537" x="0" y="0" width="67" height="30" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{bookingId}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="251e1f09-bee0-4aaa-a4db-a3a2a1e4c65d"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="ebb86d0d-7585-4a7a-aec3-496b22ca29b7" x="67" y="0" width="61" height="30" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{guestName}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="99e624b1-1d49-4312-8e79-2246802d5071"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="46f79aa9-0fdc-4d04-8bf7-2d0f0738b94d" x="128" y="0" width="61" height="30" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{guestPhone}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="74dea23a-9986-4554-8eea-28a552dfa9bd"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="4deb2b8e-dedf-406d-b46c-74f88b094ee9" x="189" y="0" width="61" height="30" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{roomType}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="682ba931-2705-49c3-b0d8-1f00818111e7"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="fd1e12e1-41be-4b92-8b90-654598a31b01" x="250" y="0" width="61" height="30" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{roomId}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4d00f64f-6b75-453e-8e61-7e7a8da280b0"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="0efa07b9-8767-4241-aac0-2ff3f6e489de" x="311" y="0" width="61" height="30" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{checkIn}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8257dede-23cb-4c85-ab07-00ccfdb922ca"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="5fde9e6a-84de-490c-99c1-7ad36bbf48af" x="372" y="0" width="61" height="30" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{duration}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2449c2b8-01e4-4779-95f3-56395f40aef0"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="9c876ce6-ea43-4494-92e1-be0928104996" x="494" y="0" width="61" height="30" pattern="Rs#,##0.##;¤-#,##0.##" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{totalPrice}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="78e8771a-8cfb-4443-b8b2-e6fd3e87fc07"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="3955a5be-7bad-4f48-ba7c-e821441474c3" x="433" y="0" width="61" height="30" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{status}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b75bc59b-c5cc-42d2-a797-13648cbf23f2"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+			</element>
+		</band>
+	</detail>
+	<columnFooter height="1" splitType="Stretch"/>
+	<pageFooter height="36" splitType="Stretch">
+		<element kind="rectangle" uuid="3bb20597-97a5-446b-afb7-7cd8bb1b330f" x="14" y="20" width="532" height="1" backcolor="#0D0C0C"/>
+	</pageFooter>
+	<summary height="42" splitType="Stretch"/>
+</jasperReport>

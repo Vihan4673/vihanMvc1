@@ -1,0 +1,136 @@
+<!-- Created with Jaspersoft Studio version 7.0.0.final using JasperReports Library version 7.0.0-b478feaa9aab4375eba71de77b4ca138ad2f62aa  -->
+<jasperReport name="GuestDetailsReport" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f4f4937c-e6b9-4abf-bd17-ede2e81d20a9">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="VillaDBConnection"/>
+	<parameter name="P_DATE" class="java.lang.String"/>
+	<query language="SQL"><![CDATA[SELECT * FROM guest]]></query>
+	<field name="GuestID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="GuestID"/>
+		<property name="com.jaspersoft.studio.field.label" value="GuestID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="guest"/>
+	</field>
+	<field name="Name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Name"/>
+		<property name="com.jaspersoft.studio.field.label" value="Name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="guest"/>
+	</field>
+	<field name="NIC" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="NIC"/>
+		<property name="com.jaspersoft.studio.field.label" value="NIC"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="guest"/>
+	</field>
+	<field name="Address" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Address"/>
+		<property name="com.jaspersoft.studio.field.label" value="Address"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="guest"/>
+	</field>
+	<field name="contact" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="contact"/>
+		<property name="com.jaspersoft.studio.field.label" value="contact"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="guest"/>
+	</field>
+	<variable name="GuestID1" resetType="Page" calculation="DistinctCount" class="java.lang.Integer">
+		<expression><![CDATA[$F{GuestID}]]></expression>
+	</variable>
+	<background splitType="Stretch"/>
+	<title height="76" splitType="Stretch">
+		<element kind="staticText" uuid="58bfc164-586f-4836-92d6-9972fe9f6269" x="0" y="0" width="560" height="30" fontSize="22.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[WIMAL VILLA]]></text>
+		</element>
+		<element kind="staticText" uuid="1491b54b-d4f0-4202-8e9a-49344bb83a9c" x="0" y="30" width="545" height="30" fontSize="18.0" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Guest Report]]></text>
+		</element>
+		<element kind="rectangle" uuid="bc89b817-4598-42b1-8221-b0471a368f2e" x="2" y="60" width="550" height="1" backcolor="#0D0C0C"/>
+		<element kind="textField" uuid="acaf4f64-de89-42b5-9140-a72e6e655ae1" x="440" y="30" width="100" height="19" fontSize="12.0" hTextAlign="Right" vTextAlign="Middle">
+			<expression><![CDATA[$P{P_DATE}]]></expression>
+		</element>
+	</title>
+	<pageHeader splitType="Stretch"/>
+	<columnHeader height="19" splitType="Stretch">
+		<element kind="staticText" uuid="372e51f0-c010-45bd-9ebc-2ecf20bbd9ae" x="0" y="0" width="111" height="19" fontSize="12.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[GuestID]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="967141af-b012-4fe8-a63c-9e1f852a0985"/>
+			<box>
+				<pen lineWidth="1.0"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="67221ca6-1ef5-4737-b22f-6d8a9cfd4252" x="111" y="0" width="111" height="19" fontSize="12.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Name]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4d16d336-cbfb-424a-b7e2-3184f7fc6989"/>
+			<box>
+				<pen lineWidth="1.0"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="8f84fea1-f38b-4b18-97bd-868d57014893" x="222" y="0" width="111" height="19" fontSize="12.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[NIC]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="909ddec6-767c-4d9b-9bf0-afd1ce06b493"/>
+			<box>
+				<pen lineWidth="1.0"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="23c8974c-1b58-4d7b-9e37-05517353603a" x="333" y="0" width="111" height="19" fontSize="12.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Address]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f5e4fe30-76f6-48c8-84da-c0801ca4f0ce"/>
+			<box>
+				<pen lineWidth="1.0"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="6957fadf-79a9-404b-827f-792ba91b15bc" x="444" y="0" width="111" height="19" fontSize="12.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[contact]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e09e645f-84c2-44ee-a136-c92a0ad4ec70"/>
+			<box>
+				<pen lineWidth="1.0"/>
+			</box>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<element kind="textField" uuid="18af3657-029a-433f-a73e-ec3917a63568" x="0" y="0" width="111" height="20" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{GuestID}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="967141af-b012-4fe8-a63c-9e1f852a0985"/>
+				<box>
+					<pen lineWidth="0.75"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="40f79a77-28a3-48b4-8164-6ea142e0cda1" x="111" y="0" width="111" height="20" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{Name}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4d16d336-cbfb-424a-b7e2-3184f7fc6989"/>
+				<box>
+					<pen lineWidth="0.75"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="19c2064e-f4db-42bb-90e9-4619786d69db" x="222" y="0" width="111" height="20" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{NIC}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="909ddec6-767c-4d9b-9bf0-afd1ce06b493"/>
+				<box>
+					<pen lineWidth="0.75"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="dcebbd5e-75ac-499c-b5ef-cc219be10c74" x="333" y="0" width="111" height="20" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{Address}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f5e4fe30-76f6-48c8-84da-c0801ca4f0ce"/>
+				<box>
+					<pen lineWidth="0.75"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="ea99162c-cca7-4acc-b5ce-d3f7fcdde5ff" x="444" y="0" width="111" height="20" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{contact}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e09e645f-84c2-44ee-a136-c92a0ad4ec70"/>
+				<box>
+					<pen lineWidth="0.75"/>
+				</box>
+			</element>
+		</band>
+	</detail>
+	<columnFooter height="1" splitType="Stretch"/>
+	<pageFooter height="70" splitType="Stretch">
+		<element kind="rectangle" uuid="1eb62d2b-6ce7-4de3-b381-3ad76685b1b6" x="2" y="50" width="550" height="1" backcolor="#0D0C0C"/>
+		<element kind="textField" uuid="8f86737d-bb44-4cec-84c2-053b6c8813d6" x="100" y="-2" width="116" height="30" fontSize="15.0" hTextAlign="Center" vTextAlign="Middle">
+			<expression><![CDATA[$V{GuestID1}]]></expression>
+		</element>
+		<element kind="staticText" uuid="9e5adcff-c8bb-4d59-a224-e9598db14827" x="5" y="-2" width="94" height="30" fontSize="15.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Total Guest :]]></text>
+		</element>
+	</pageFooter>
+	<summary height="42" splitType="Stretch"/>
+</jasperReport>

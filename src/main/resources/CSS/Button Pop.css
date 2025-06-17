@@ -1,0 +1,18 @@
+.button-lassana {
+    -fx-background-color: linear-gradient(to right, #6a11cb, #2575fc);
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 15;
+    -fx-padding: 8 20 8 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 8, 0.3, 0, 2);
+    -fx-cursor: hand;
+    -fx-border-color: transparent;
+    -fx-border-radius: 15;
+}
+
+.button-lassana:hover {
+    -fx-background-color: linear-gradient(to right, #2575fc, #6a11cb);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
