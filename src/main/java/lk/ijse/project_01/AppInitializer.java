@@ -20,7 +20,7 @@ public class AppInitializer extends Application {
         Scene scene = new Scene(parent);
 
         primaryStage.setScene(scene);
-        primaryStage.setTitle("Guest");
+        primaryStage.setTitle("Wimal villa");
         primaryStage.show();
     }
 }
